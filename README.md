@@ -94,13 +94,18 @@
 
 ## 프로젝트 실행
 
-1. eclipse 하단의 Servers 탭을 클릭하고, 마우스 우클릭하여 **New > Server** 를 선택하여 서버를 설치한다.
+1. **데이터베이스 설정**:
+   - 프로젝트의 `DATABASE` 폴더에 있는 DDL 및 DML 스크립트를 사용하여 사용하려는 데이터베이스에 테이블과 초기 데이터를 생성합니다.
+   - `src/main/resources/application.properties` 파일의 `spring.datasource.*` 속성을 본인의 데이터베이스 설정에 맞게 수정합니다. (기본값은 내장 HSQLDB로 설정되어 있습니다.)
 
-2. 생성 또는 복사된 소스 내부의 DATABASE 폴더 내 dml, ddl을 참고하여 연결하고자 하는 DB에 테이블 생성 및 기초 데이터를 생성한다.  
-   dml 및 ddl은 5가지 데이터베이스(Altibase, Cubrid, MySQL, Oracle, Tibero)를 지원한다.
+2. **애플리케이션 실행**:
+   - 프로젝트의 루트 디렉토리에서 터미널 또는 커맨드 프롬프트를 열고 다음 Maven 명령어를 실행합니다.
+   ```bash
+   mvn spring-boot:run
+   ```
 
-![new_template_sht_run1](https://user-images.githubusercontent.com/3771788/229035724-9530fca0-b67a-41fc-a1b9-b7bcddc569a8.jpg)
-
-3. [템플릿 구성 및 환경설정](https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:let4:configration) 문서를 참고하여 템플릿 환경설정을 수행한다.
-
-4. 실행할 프로젝트를 마우스 우클릭하고 **Run As > Run on Server** 를 선택한다.
+3. **애플리케이션 접속**:
+   - 애플리케이션이 성공적으로 시작되면, 웹 브라우저를 열고 다음 URL로 접속합니다.
+   ```
+   http://localhost:8080/sht_webapp/
+   ```
