@@ -33,7 +33,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
  *
  * </pre>
  */
-@Controller@SessionAttributes(types = ComDefaultVO.class)
+@Controller
+@SessionAttributes(types = ComDefaultVO.class)
 public class EgovMainController {
 
 	/**
