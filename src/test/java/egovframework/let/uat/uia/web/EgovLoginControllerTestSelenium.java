@@ -32,7 +32,9 @@ class EgovLoginControllerTestSelenium {
 		// given
 
 		// 로그인 화면 이동
-		driver.get("http://localhost:8080/sht_webapp/uat/uia/egovLoginUsr.do");
+		String baseUrl = System.getProperty("test.base.url", "http://localhost:8080");
+		String contextPath = System.getProperty("server.servlet.context-path", "");
+		driver.get(baseUrl + contextPath + "/uat/uia/egovLoginUsr.do");
 
 		JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
 
