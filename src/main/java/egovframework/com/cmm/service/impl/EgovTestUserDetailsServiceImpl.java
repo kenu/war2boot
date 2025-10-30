@@ -42,10 +42,6 @@ public class EgovTestUserDetailsServiceImpl extends EgovAbstractServiceImpl impl
 		loginVO.setUniqId("USRCNFRM_00000000000");
 		return loginVO;
 
-		// return
-		// RequestContextHolder.getRequestAttributes().getAttribute("loginVO",
-		// RequestAttributes.SCOPE_SESSION);
-
 	}
 
 	@Override
